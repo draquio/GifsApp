@@ -10,7 +10,6 @@ export class GifsService {
   private ApiKey: string = 'syzmqA7n1kv5MBQPE7OGVohPaYoLDcY8';
   constructor(private http: HttpClient) {
     this.loadLocalStorage();
-    // this.searchTag('anime');
     if (this._tagsHistory.length > 0) {
       this.searchTag(this._tagsHistory[0])
     }else{

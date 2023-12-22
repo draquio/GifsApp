@@ -5,9 +5,10 @@
     [gif]="gif"
   ></gifs-card-item>
 </div> -->
-<div [ngStyle]="{'columns': '3 200px', 'column-gap': '10px'}">
+<div class="list_gifs">
   <gifs-card-item
     *ngFor="let gif of gifs"
     [gif]="gif"
+    class="list_gif_item"
   ></gifs-card-item>
 </div>

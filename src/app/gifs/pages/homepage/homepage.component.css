@@ -1,0 +1,9 @@
+/* .main_container{
+    display: flex;
+} */
+
+.search_box{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}

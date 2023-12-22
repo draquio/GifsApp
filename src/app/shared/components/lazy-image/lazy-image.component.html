@@ -1,13 +1,15 @@
-<div class="d-flex justify-content-center align-items-center border" [ngStyle]="{'min-height':image.height+'px'}">
-<!-- <div class="d-flex justify-content-center align-items-center"> -->
+<figure class="gifs_item_figure">
   <img
     [src]="image.url"
     [alt]="image"
-    class="card-img-top animate__animated animate__fadeIn"
+    class="gifs_item_img animate__animated animate__fadeIn"
     (load)="onLoad()"
     [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
   />
-  <gif-loader *ngIf="!hasLoaded"></gif-loader>
+</figure>
+<figure class="gifs_item_figure" *ngIf="!hasLoaded" [ngStyle]="{'width':'100%'}">
+  <gif-loader></gif-loader>
+  {{image.width }} - {{image.height}}
+  <!-- <gif-loader></gif-loader> -->
+</figure>
 
-
-</div>
