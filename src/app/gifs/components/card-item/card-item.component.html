@@ -1,0 +1,6 @@
+<!-- <div class="card mb-2 text-center bg-dark" [ngStyle]="{ 'min-height': imageHeight, 'margin-bottom': '20px'}"> -->
+<!-- <div class="card mb-2 text-center bg-dark"> -->
+<div class="mb-2 text-center" [ngStyle]="{'break-inside': 'avoid-column'}">
+  <shared-lazy-image [image]="gif.images.downsized_medium" [alt]="gif.title" ></shared-lazy-image>
+  <!-- <p class="card-text">{{ gif.title || "No title" }}</p> -->
+</div>
