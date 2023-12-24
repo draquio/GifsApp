@@ -1,0 +1,12 @@
+<div class="search">
+    <search-icon class="search_icon"></search-icon>
+    <input
+    [ngStyle]="{visibility: isOpenMenu ? 'visible' : 'hidden'}"
+    type="text"
+    class="form-control"
+    placeholder="Buscar Gifs..."
+    (keyup.enter)="searchTag()"
+    #txtTagInput
+    class="search_box"
+    />
+</div>

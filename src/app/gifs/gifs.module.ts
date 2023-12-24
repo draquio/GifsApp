@@ -9,6 +9,6 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [HomepageComponent, SearchBoxComponent, CardListComponent, CardItemComponent],
   imports: [CommonModule, SharedModule],
-  exports:[HomepageComponent]
+  exports:[HomepageComponent, SearchBoxComponent]
 })
 export class GifsModule {}

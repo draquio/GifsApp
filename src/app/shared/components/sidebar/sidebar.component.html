@@ -1,15 +1,13 @@
-<aside class="sidebar" id="sidebar">
-    <h3>GifsApp</h3>
-    <hr class="hr_white">
+<aside class="sidebar" id="sidebar" (click)="OpenCloseMenu(true)" [ngClass]="{'menuactive': isOpenMenu}">
+    <h3  *ngIf="isOpenMenu; else menuicon">GifsApp</h3>
+    <ng-template #menuicon>
+        <menu-icon class="menu_icon"></menu-icon>
+    </ng-template>
+    <hr  class="hr_white"/>
+    <gifs-search-box [isOpenMenu]="isOpenMenu"></gifs-search-box>
     <div class="history_list_tags">
-        <button *ngFor="let tag of Tags" class="history_list_tags_item" (click)="GetOldTag(tag)" >{{tag | titlecase}}</button>
+        <button *ngFor="let tag of Tags" class="history_list_tags_item" (click)="GetOldTag(tag)"><img-icon class="icon"></img-icon> <span [ngStyle]="{'visibility': isOpenMenu ? 'visible' : 'hidden'}" >{{tag | titlecase}}</span></button>
     </div>
 </aside>
+<div class="closemenu" (click)="OpenCloseMenu(false)" [ngStyle]="{'display': isOpenMenu ? 'block' : 'none'}"></div>
 
-<!-- <div class="bg-dark border-rigth p-3" id="sidebar">
-    <h3 class="text-light">GifsApp</h3>
-    <hr class="text-white">
-    <div class="list-group list-reset">
-        <button *ngFor="let tag of Tags" class="list-group-item list-group-item-action" (click)="GetOldTag(tag)" >{{tag | titlecase}}</button>
-    </div>
-</div> -->

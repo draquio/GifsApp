@@ -1,4 +1,5 @@
 .list_gifs{
-    columns: 4 300px; 
+    columns: 5 300px; 
     column-gap: 10px;
 }
+

@@ -1,15 +1,16 @@
-.gifs_item_figure{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 255, 0.206);
+.gifs_item_figure_loader{
+    background-color: #ee72141f;
     display: flex;
+    /* height: 200px; */
+    width: 100%;
+    align-items: center;
     justify-content: center;
     break-inside:avoid-column;
-    align-items: center;
     margin-bottom: 10px;
-    min-width: 250px;
+}
+.gifs_item_figure{
+    margin-bottom: 10px;
 }
 .gifs_item_img{
     width: 100%;
-    height: 100%;
 }

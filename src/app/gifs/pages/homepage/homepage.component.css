@@ -1,9 +1,14 @@
-/* .main_container{
+.main_container{
     display: flex;
-} */
+    flex-direction: column;
+    gap: 20px;
+}
 
 .search_box{
     display: flex;
     flex-direction: column;
     background-color: red;
+}
+.content{
+    max-width: 1200px;
 }

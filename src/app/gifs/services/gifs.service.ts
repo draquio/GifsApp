@@ -43,14 +43,16 @@ export class GifsService {
     this.organizeHistory(tag);
     const params = new HttpParams()
       .set('api_key', ENV.API_key)
-      .set('limit', 30)
-      .set('q', tag);
+      .set('limit', 50)
+      .set('q', tag)
+      .set('offset', 150)
     this.http
       .get<SearchResponse>(`${ENV.API_Url}/gifs/${ENV.API_Routes.search}`, {
         params,
       })
       .subscribe((resp) => {
         this.gifList = resp.data;
+        console.log(resp);
         
       });
   }

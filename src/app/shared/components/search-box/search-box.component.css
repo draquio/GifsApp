@@ -1,0 +1,20 @@
+.search{
+    display: flex;
+    margin-bottom: 7px;
+}
+.search_icon{
+    padding: 8px;
+    background-color: #ee7214;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.search_box{
+    border: 1px solid #bfbfbf61;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.search_box:focus-visible{
+    outline: 0;
+}

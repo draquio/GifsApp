@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.logo{
+    color: #ee7214;
+    font-size:70px;
+    font-family: 'Lilita One', sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+@media (max-width:300px){
+    .logo{
+        font-size: 50px;
+    }
+}

@@ -3,13 +3,11 @@
     [src]="image.url"
     [alt]="image"
     class="gifs_item_img animate__animated animate__fadeIn"
-    (load)="onLoad()"
     [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
-  />
+    (load)="onLoad()"
+    />
 </figure>
-<figure class="gifs_item_figure" *ngIf="!hasLoaded" [ngStyle]="{'width':'100%'}">
+<figure class="gifs_item_figure_loader" *ngIf="!hasLoaded" [ngStyle]="{'height':image.height+'px'}">
   <gif-loader></gif-loader>
-  {{image.width }} - {{image.height}}
-  <!-- <gif-loader></gif-loader> -->
 </figure>
 
